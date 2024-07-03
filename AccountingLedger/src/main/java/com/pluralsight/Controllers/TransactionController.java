@@ -3,13 +3,18 @@ package com.pluralsight.Controllers;
 import com.pluralsight.DAO.TransactionDAO;
 import com.pluralsight.models.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
 import java.util.List;
+@RestController
+@CrossOrigin
+@RequestMapping("/transactions")
 
 public class TransactionController {
     private TransactionDAO transactionDAO;
-    @SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection")
     @Autowired
     public TransactionController(TransactionDAO transactionDAO) {
         this.transactionDAO = transactionDAO;
