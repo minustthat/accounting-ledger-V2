@@ -2,21 +2,27 @@ package com.pluralsight.DAO.MySql;
 
 import com.pluralsight.DAO.TransactionTypeDAO;
 import com.pluralsight.models.TransactionType;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import javax.sql.DataSource;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-
-public class MySqlTransactionTypeDAO implements TransactionTypeDAO {
-    private final Connection connection;
-
-    public MySqlTransactionTypeDAO(Connection connection) {
-        this.connection = connection;
+@Component
+public class MySqlTransactionTypeDAO extends MySQLDaoBase implements TransactionTypeDAO {
+    private DataSource dataSource;
+@Autowired
+    public MySqlTransactionTypeDAO(DataSource dataSource) {
+        super(dataSource);
     }
 
     @Override
     public void addTransactionType(TransactionType transactionType) {
-        String sql = "INSERT INTO TransactionTypes (type) VALUES (?)";
-        try (PreparedStatement statement = connection.prepareStatement(sql)) {
+
+        try (Connection connection = getConnection()) {
+            String sql = "INSERT INTO TransactionTypes (type) VALUES (?)";
+            PreparedStatement statement = connection.prepareStatement(sql);
             statement.setString(1, transactionType.getType());
             statement.executeUpdate();
         } catch (SQLException e) {
@@ -26,8 +32,10 @@ public class MySqlTransactionTypeDAO implements TransactionTypeDAO {
 
     @Override
     public TransactionType getTransactionType(int id) {
-        String sql = "SELECT * FROM TransactionTypes WHERE transaction_type_id = ?";
-        try (PreparedStatement statement = connection.prepareStatement(sql)) {
+
+        try (Connection connection = getConnection()) {
+            String sql = "SELECT * FROM TransactionTypes WHERE transaction_type_id = ?";
+            PreparedStatement statement = connection.prepareStatement(sql);
             statement.setInt(1, id);
             ResultSet resultSet = statement.executeQuery();
             if (resultSet.next()) {
@@ -42,9 +50,10 @@ public class MySqlTransactionTypeDAO implements TransactionTypeDAO {
     @Override
     public List<TransactionType> getAllTransactionTypes() {
         List<TransactionType> transactionTypes = new ArrayList<>();
-        String sql = "SELECT * FROM TransactionTypes";
-        try (Statement statement = connection.createStatement();
-             ResultSet resultSet = statement.executeQuery(sql)) {
+        try (Connection connection = getConnection()) {
+            String sql = "SELECT * FROM TransactionTypes";
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(sql);
             while (resultSet.next()) {
                 transactionTypes.add(mapRow(resultSet));
             }
@@ -56,8 +65,10 @@ public class MySqlTransactionTypeDAO implements TransactionTypeDAO {
 
     @Override
     public void updateTransactionType(TransactionType transactionType) {
-        String sql = "UPDATE TransactionTypes SET type = ? WHERE transaction_type_id = ?";
-        try (PreparedStatement statement = connection.prepareStatement(sql)) {
+
+        try (Connection connection = getConnection()) {
+            String sql = "UPDATE TransactionTypes SET type = ? WHERE transaction_type_id = ?";
+            PreparedStatement statement = connection.prepareStatement(sql);
             statement.setString(1, transactionType.getType());
             statement.setInt(2, transactionType.getId());
             statement.executeUpdate();
@@ -68,8 +79,10 @@ public class MySqlTransactionTypeDAO implements TransactionTypeDAO {
 
     @Override
     public void deleteTransactionType(int id) {
-        String sql = "DELETE FROM TransactionTypes WHERE transaction_type_id = ?";
-        try (PreparedStatement statement = connection.prepareStatement(sql)) {
+
+        try (Connection connection = getConnection()) {
+            String sql = "DELETE FROM TransactionTypes WHERE transaction_type_id = ?";
+            PreparedStatement statement = connection.prepareStatement(sql);
             statement.setInt(1, id);
             statement.executeUpdate();
         } catch (SQLException e) {

@@ -2,21 +2,28 @@ package com.pluralsight.DAO.MySql;
 
 import com.pluralsight.DAO.CustomerDAO;
 import com.pluralsight.models.Customer;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import javax.sql.DataSource;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MySqlCustomerDAO implements CustomerDAO {
-    private final Connection connection;
-
-    public MySqlCustomerDAO(Connection connection) {
-        this.connection = connection;
+@Component
+public class MySqlCustomerDAO extends MySQLDaoBase implements CustomerDAO {
+    private DataSource dataSource;
+@Autowired
+    public MySqlCustomerDAO(DataSource dataSource) {
+super(dataSource);
     }
 
     @Override
     public void addCustomer(Customer customer) {
-        String sql = "INSERT INTO Customers (name, email, phone) VALUES (?, ?, ?)";
-        try (PreparedStatement statement = connection.prepareStatement(sql)) {
+
+        try (Connection connection = getConnection()) {
+            String sql = "INSERT INTO Customers (name, email, phone) VALUES (?, ?, ?)";
+            PreparedStatement statement = connection.prepareStatement(sql);
             statement.setString(1, customer.getName());
             statement.setString(2, customer.getEmail());
             statement.setString(3, customer.getPhone());
@@ -28,8 +35,10 @@ public class MySqlCustomerDAO implements CustomerDAO {
 
     @Override
     public Customer getCustomer(int id) {
-        String sql = "SELECT * FROM Customers WHERE customer_id = ?";
-        try (PreparedStatement statement = connection.prepareStatement(sql)) {
+
+        try (Connection connection = getConnection()) {
+            String sql = "SELECT * FROM Customers WHERE customer_id = ?";
+            PreparedStatement statement = connection.prepareStatement(sql);
             statement.setInt(1, id);
             ResultSet resultSet = statement.executeQuery();
             if (resultSet.next()) {
@@ -44,9 +53,10 @@ public class MySqlCustomerDAO implements CustomerDAO {
     @Override
     public List<Customer> getAllCustomers() {
         List<Customer> customers = new ArrayList<>();
-        String sql = "SELECT * FROM Customers";
-        try (Statement statement = connection.createStatement();
-             ResultSet resultSet = statement.executeQuery(sql)) {
+        try (Connection connection = getConnection()) {
+            String sql = "SELECT * FROM Customers";
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(sql);
             while (resultSet.next()) {
                 customers.add(mapRow(resultSet));
             }
@@ -58,8 +68,10 @@ public class MySqlCustomerDAO implements CustomerDAO {
 
     @Override
     public void updateCustomer(Customer customer) {
-        String sql = "UPDATE Customers SET name = ?, email = ?, phone = ? WHERE customer_id = ?";
-        try (PreparedStatement statement = connection.prepareStatement(sql)) {
+
+        try (Connection connection = getConnection()) {
+            String sql = "UPDATE Customers SET name = ?, email = ?, phone = ? WHERE customer_id = ?";
+            PreparedStatement statement = connection.prepareStatement(sql);
             statement.setString(1, customer.getName());
             statement.setString(2, customer.getEmail());
             statement.setString(3, customer.getPhone());
@@ -72,8 +84,10 @@ public class MySqlCustomerDAO implements CustomerDAO {
 
     @Override
     public void deleteCustomer(int id) {
-        String sql = "DELETE FROM Customers WHERE customer_id = ?";
-        try (PreparedStatement statement = connection.prepareStatement(sql)) {
+
+        try (Connection connection = getConnection()) {
+            String sql = "DELETE FROM Customers WHERE customer_id = ?";
+            PreparedStatement statement = connection.prepareStatement(sql);
             statement.setInt(1, id);
             statement.executeUpdate();
         } catch (SQLException e) {
