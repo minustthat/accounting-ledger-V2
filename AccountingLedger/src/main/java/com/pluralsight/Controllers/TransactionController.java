@@ -4,6 +4,7 @@ import com.pluralsight.DAO.TransactionDAO;
 import com.pluralsight.models.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,10 +21,12 @@ public class TransactionController {
         this.transactionDAO = transactionDAO;
     }
 
+@GetMapping  
     public List<Transaction> showAllTransactions() {
 
 List<Transaction> transactions = transactionDAO.getAllTransactions();
         return transactions;
     }
+
 
 }
