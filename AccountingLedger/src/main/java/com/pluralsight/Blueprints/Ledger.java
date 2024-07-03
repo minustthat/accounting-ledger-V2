@@ -1,4 +1,4 @@
-package com.pluralsight.Controllers;
+package com.pluralsight.Blueprints;
 
 
 
@@ -12,7 +12,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-import static com.pluralsight.Controllers.HomePage.scanner;
+import static com.pluralsight.Blueprints.HomePage.scanner;
 
 
 public class Ledger

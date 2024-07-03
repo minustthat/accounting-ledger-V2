@@ -1,4 +1,4 @@
-package com.pluralsight.Controllers;
+package com.pluralsight.Blueprints;
 
 
 
@@ -9,10 +9,10 @@ import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 
-import static com.pluralsight.Controllers.HomePage.homepage;
-import static com.pluralsight.Controllers.HomePage.scanner;
-import static com.pluralsight.Controllers.Ledger.printHeader;
-import static com.pluralsight.Controllers.Ledger.transactions;
+import static com.pluralsight.Blueprints.HomePage.homepage;
+import static com.pluralsight.Blueprints.HomePage.scanner;
+import static com.pluralsight.Blueprints.Ledger.printHeader;
+import static com.pluralsight.Blueprints.Ledger.transactions;
 import static java.time.temporal.TemporalAdjusters.firstDayOfYear;
 
 public class Reports

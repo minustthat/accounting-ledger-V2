@@ -1,4 +1,4 @@
-package com.pluralsight.Controllers;
+package com.pluralsight.Blueprints;
 
 
 
