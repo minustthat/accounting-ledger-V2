@@ -1,12 +1,18 @@
-package com.pluralsight;
+package com.pluralsight.Controllers;
+
+
+
+import com.pluralsight.UI.Colors;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 
-import static com.pluralsight.HomePage.homepage;
-import static com.pluralsight.Ledger.*;
-import static com.pluralsight.HomePage.scanner;
+
+import static com.pluralsight.Controllers.HomePage.homepage;
+import static com.pluralsight.Controllers.HomePage.scanner;
+import static com.pluralsight.Controllers.Ledger.printHeader;
+import static com.pluralsight.Controllers.Ledger.transactions;
 import static java.time.temporal.TemporalAdjusters.firstDayOfYear;
 
 public class Reports
