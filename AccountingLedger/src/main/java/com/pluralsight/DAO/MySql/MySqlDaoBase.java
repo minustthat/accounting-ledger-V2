@@ -3,11 +3,11 @@ import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-    public abstract class MySQLDaoBase
+    public abstract class MySqlDaoBase
     {
         private DataSource dataSource;
 
-        public MySQLDaoBase(DataSource dataSource)
+        public MySqlDaoBase(DataSource dataSource)
         {
             this.dataSource = dataSource;
         }

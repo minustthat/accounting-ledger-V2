@@ -10,7 +10,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 @Component
-public class MySqlTransactionTypeDAO extends MySQLDaoBase implements TransactionTypeDAO {
+public class MySqlTransactionTypeDAO extends MySqlDaoBase implements TransactionTypeDAO {
     private DataSource dataSource;
 @Autowired
     public MySqlTransactionTypeDAO(DataSource dataSource) {

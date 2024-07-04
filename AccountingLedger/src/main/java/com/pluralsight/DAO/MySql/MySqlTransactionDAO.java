@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component
-public class MySqlTransactionDAO extends MySQLDaoBase implements TransactionDAO {
+public class MySqlTransactionDAO extends MySqlDaoBase implements TransactionDAO {
 
     @Autowired
     public MySqlTransactionDAO(DataSource dataSource) {

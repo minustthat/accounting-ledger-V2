@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component
-public class MySqlCustomerDAO extends MySQLDaoBase implements CustomerDAO {
+public class MySqlCustomerDAO extends MySqlDaoBase implements CustomerDAO {
     private DataSource dataSource;
 @Autowired
     public MySqlCustomerDAO(DataSource dataSource) {
@@ -58,7 +58,12 @@ super(dataSource);
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(sql);
             while (resultSet.next()) {
-                customers.add(mapRow(resultSet));
+                int customerId = resultSet.getInt("customer_id");
+                String name = resultSet.getString("name");
+                String email = resultSet.getString("email");
+                String phone = resultSet.getString("phone");
+                Customer customer = new Customer(customerId, name, email, phone);
+                customers.add(customer);
             }
         } catch (SQLException e) {
             e.printStackTrace();
