@@ -14,16 +14,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 
 public class AccountingLedgerApplication   {
-//	private TransactionController transactionController;
-//	private TransactionDAO transactionDAO;
-//	private DatabaseConfig databaseConfig;
-//	CustomerController customerController;
-//	CustomerDAO customerDAO;
-//	@Autowired
-//	public AccountingLedgerApplication(TransactionController transactionController, TransactionDAO transactionDAO, DatabaseConfig databaseConfig, CustomerController customerController) {
-//		this.transactionController = transactionController;
-//		this.transactionDAO =  new MySqlTransactionDAO(databaseConfig.dataSource());
-//	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(AccountingLedgerApplication.class, args);

@@ -106,5 +106,6 @@ super(dataSource);
         String email = resultSet.getString("email");
         String phone = resultSet.getString("phone");
         return new Customer(id, name, email, phone);
+
     }
 }
