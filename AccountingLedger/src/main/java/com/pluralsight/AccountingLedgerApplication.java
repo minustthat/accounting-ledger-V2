@@ -2,7 +2,6 @@ package com.pluralsight;
 
 import com.pluralsight.Configuration.DatabaseConfig;
 import com.pluralsight.Controllers.CustomerController;
-import com.pluralsight.Controllers.TransactionController;
 import com.pluralsight.DAO.CustomerDAO;
 import com.pluralsight.DAO.MySql.MySqlTransactionDAO;
 import com.pluralsight.DAO.TransactionDAO;
