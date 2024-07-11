@@ -22,7 +22,7 @@ super(dataSource);
     public void addCustomer(Customer customer) {
 
         try (Connection connection = getConnection()) {
-            String sql = "INSERT INTO Customers (name, email, phone) VALUES (?, ?, ?)";
+            String sql = "INSERT INTO Customers (id,name, email, phone) VALUES (?, ?, ?)";
             PreparedStatement statement = connection.prepareStatement(sql);
             statement.setString(1, customer.getName());
             statement.setString(2, customer.getEmail());
