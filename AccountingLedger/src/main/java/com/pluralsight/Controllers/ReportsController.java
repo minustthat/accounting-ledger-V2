@@ -4,6 +4,8 @@ import com.pluralsight.DAO.TransactionDAO;
 import com.pluralsight.models.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
@@ -13,6 +15,7 @@ import java.time.*;
 
 @RestController
 @CrossOrigin
+@EnableMethodSecurity
 @RequestMapping("reports")
 
 public class ReportsController {
@@ -31,7 +34,7 @@ public class ReportsController {
                 .filter(t-> t.getTransactionDate().getMonthValue() == today.getMonthValue())
                 .toList();
     }
-
+    @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/previousMonths")
     @ResponseStatus(HttpStatus.OK)
     public List<Transaction> getPreviousMonths(){

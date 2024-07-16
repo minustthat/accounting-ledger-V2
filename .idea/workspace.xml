@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="285fbdce-ad40-4cec-bbe6-11899e5d2caa" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/AccountingLedger/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AccountingLedger/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AccountingLedger/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AccountingLedger/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AccountingLedger/src/main/java/com/pluralsight/AccountingLedgerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/AccountingLedger/src/main/java/com/pluralsight/AccountingLedgerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AccountingLedger/src/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AccountingLedger/src/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AccountingLedger/src/main/java/com/pluralsight/Configuration/SecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AccountingLedger/src/main/java/com/pluralsight/Configuration/DatabaseConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/AccountingLedger/src/main/java/com/pluralsight/Configuration/DatabaseConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +66,9 @@
       <updated>1719989308790</updated>
       <workItem from="1719989309848" duration="1120000" />
       <workItem from="1720324622430" duration="159000" />
+      <workItem from="1720980166890" duration="598000" />
+      <workItem from="1721022339512" duration="1990000" />
+      <workItem from="1721026946552" duration="5000" />
     </task>
     <servers />
   </component>
