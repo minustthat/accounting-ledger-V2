@@ -30,7 +30,7 @@ public class LedgerController {
         this.transactionTypeDao = transactionTypeDao;
     }
 
-    @PreAuthorize("hasRole('USER')")
+
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
     public List<Transaction> displayAllTransactions() {
