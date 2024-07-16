@@ -21,7 +21,7 @@ public class MySqlTransactionDAO extends MySqlDaoBase implements TransactionDAO 
 
 
     @Override
-    public void addTransaction(Transaction transaction) {
+    public Transaction addTransaction(Transaction transaction) {
 
         try (Connection connection = getConnection()) {
             String sql = "INSERT INTO Transactions (transaction_id,customer_id,transaction_type_id, amount, transaction_date) VALUES (?, ?, ?,?,?)";
@@ -32,11 +32,10 @@ public class MySqlTransactionDAO extends MySqlDaoBase implements TransactionDAO 
                 statement.setBigDecimal(4, transaction.getAmount());
                 statement.setTimestamp(5, Timestamp.valueOf(transaction.getTransactionDate()));
                 statement.executeUpdate();
-
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
+return transaction;
     }
 
     @Override
