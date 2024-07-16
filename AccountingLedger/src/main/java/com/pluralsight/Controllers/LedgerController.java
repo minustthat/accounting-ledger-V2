@@ -58,9 +58,9 @@ public class LedgerController {
     @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/addDeposit")
     @ResponseStatus(HttpStatus.CREATED)
-    public void addDeposit(@RequestBody Transaction transaction) {
-        transactionDao.addTransaction(transaction);
-
+    public Transaction addDeposit(@RequestBody Transaction transaction) {
+        Transaction newTransaction = transactionDao.addTransaction(transaction);
+        return newTransaction;
 
     }
 

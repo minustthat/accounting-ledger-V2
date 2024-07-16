@@ -42,6 +42,15 @@ public class SecurityConfig {
             .build();
 
         return new InMemoryUserDetailsManager(user1, admin);
+        /* Created two users, one admin and one regular,
+        configured csrf to accept all requests,
+        allowed any request to be authenticated,
+        allowed basic http authentication
+        , created stateless api session.
+        
+        */
+
+
 }
 
 }
