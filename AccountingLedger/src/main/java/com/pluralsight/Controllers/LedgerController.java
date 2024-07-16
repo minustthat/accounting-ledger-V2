@@ -7,13 +7,17 @@ import com.pluralsight.models.TransactionType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+import static org.springframework.security.authorization.AuthorityReactiveAuthorizationManager.hasRole;
+
 @RestController
 @CrossOrigin
+@EnableMethodSecurity
 @RequestMapping("transactions")
 public class LedgerController {
     private TransactionDAO transactionDao;
@@ -51,17 +55,16 @@ public class LedgerController {
                 .toList();
     }
 
-
-    @PreAuthorize("permitAll()")
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/addDeposit")
     @ResponseStatus(HttpStatus.CREATED)
-    @ResponseBody
-    public Transaction addDeposit(@RequestBody Transaction transaction) {
+    public void addDeposit(@RequestBody Transaction transaction) {
+        transactionDao.addTransaction(transaction);
 
-        Transaction newTransaction = transactionDao.addTransaction(transaction);
-        return newTransaction;
 
     }
+
+
     // unsure about what reports are exactly
 
 }

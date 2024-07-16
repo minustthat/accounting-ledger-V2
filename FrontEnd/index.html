@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/lib/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/main.css">
+
+    <!--  JS  -->
+    <script src="js/lib/axios.min.js"></script>
+    <script src="js/lib/mustache.js"></script>
+    <script src="js/lib/bootstrap.min.js"></script>
+    <script src="js/lib/jquery.min.js"></script>
+
+    <script src="js/config.js"></script>
+    <script src="js/template-builder.js"></script>
+    <script src="js/services/products-service.js"></script>
+    <script src="js/services/categories-service.js"></script>
+    <script src="js/services/user-service.js"></script>
+    <script src="js/services/profile-service.js"></script>
+    <script src="js/services/shoppingcart-service.js"></script>
+
+    <script src="js/filter.js"></script>
+
+
+    <script src="js/application.js"></script>
+    <title>Document</title>
+</head>
+<body>
+<div class="dropdown" data-bs-theme="white">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButtonLight" data-bs-toggle="dropdown" aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-lightbulb" viewBox="0 0 16 16">
+            <path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a2 2 0 0 0-.453-.618A5.98 5.98 0 0 1 2 6m6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1"/>
+        </svg>
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonLight">
+        <li><a class="dropdown-item active" href="#" onclick="document.body.style.backgroundColor = 'white'">Light Mode </a></li>
+        <li><a class="dropdown-item " href="#"onclick="changeBackgroundColor()">Dark Mode </a></li>
+    </ul>
+</div>
+</body>
+</html>
