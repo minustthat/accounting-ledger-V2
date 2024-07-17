@@ -8,6 +8,8 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -32,12 +34,12 @@ public class SecurityConfig {
 @Bean
     public UserDetailsService userDetailsService(){
         UserDetails admin  = User.withUsername("admin")
-                .password("{noop}test")
-                .roles("ADMIN")
+                .password("$2a$12$SXLhLScEXIz/FUBjExdrWO3lUKaL.i79NX527N2v2nu99m0HbERwa")
+                .roles("ADMIN", "USER")
                 .build();
 
     UserDetails user1  = User.withUsername("testUser")
-            .password("{noop}test1")
+            .password("$2a$12$SyxXJg6x1EH6IEhkDmZ5c.bHhXO/l.Dlwwe520nAw1BFSZWpxl.yS")
             .roles("USER")
             .build();
 
@@ -49,8 +51,14 @@ public class SecurityConfig {
         , created stateless api session.
         adm
         */
-
-
 }
+
+@Bean
+    public PasswordEncoder passwordEncoder(){
+        return new BCryptPasswordEncoder();
+
+    }
+
+
 
 }
