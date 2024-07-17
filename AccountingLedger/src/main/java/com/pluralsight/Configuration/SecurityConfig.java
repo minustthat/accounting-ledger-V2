@@ -47,7 +47,7 @@ public class SecurityConfig {
         allowed any request to be authenticated,
         allowed basic http authentication
         , created stateless api session.
-        
+        adm
         */
 
 
