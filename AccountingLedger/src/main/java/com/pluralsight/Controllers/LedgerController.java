@@ -31,6 +31,10 @@ public class LedgerController {
     }
 
 
+
+
+
+
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
     public List<Transaction> displayAllTransactions() {
@@ -63,6 +67,9 @@ public class LedgerController {
         return newTransaction;
 
     }
+
+
+
 
 
     // unsure about what reports are exactly

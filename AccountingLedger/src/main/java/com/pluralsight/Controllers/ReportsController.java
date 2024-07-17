@@ -49,7 +49,7 @@ public class ReportsController {
     public List<Transaction> yearToDate(){
         LocalDateTime today = LocalDateTime.now();
         return transactionDao.getAllTransactions().stream()
-                .filter(t-> t.getTransactionDate().getYear() < today.getYear())
+                .filter(t-> t.getTransactionDate().getYear() == today.getYear())
                 .toList();
     }
 
