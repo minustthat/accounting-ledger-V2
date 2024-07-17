@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="efcdc85f-6dd2-4b9e-9f1e-2adf45da4316" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../AccountingLedger/front end/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AccountingLedger/front end/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AccountingLedger/front end/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AccountingLedger/front end/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AccountingLedger/front end/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AccountingLedger/front end/css/library/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AccountingLedger/front end/css/library/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AccountingLedger/front end/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AccountingLedger/front end/fonts/Comfortaa-Bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AccountingLedger/front end/fonts/Comfortaa-Light.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AccountingLedger/front end/fonts/Comfortaa-Medium.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AccountingLedger/front end/fonts/Comfortaa-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AccountingLedger/front end/fonts/Comfortaa-SemiBold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AccountingLedger/front end/images/updated.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AccountingLedger/front end/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AccountingLedger/front end/js/application.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AccountingLedger/front end/js/config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AccountingLedger/front end/js/filter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AccountingLedger/front end/js/library/axios.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AccountingLedger/front end/js/library/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AccountingLedger/front end/js/library/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AccountingLedger/front end/js/library/mustache.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AccountingLedger/front end/js/services/categories-service.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AccountingLedger/front end/js/services/products-service.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AccountingLedger/front end/js/services/profile-service.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AccountingLedger/front end/js/services/user-service.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AccountingLedger/front end/js/template-builder.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AccountingLedger/front end/templates/error.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AccountingLedger/front end/templates/filter.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AccountingLedger/front end/templates/header.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AccountingLedger/front end/templates/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AccountingLedger/front end/templates/image-detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AccountingLedger/front end/templates/login-form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AccountingLedger/front end/templates/message.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AccountingLedger/front end/templates/product.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AccountingLedger/front end/templates/profile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AccountingLedger/front end/templates/user.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AccountingLedger/src/main/java/com/pluralsight/Configuration/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AccountingLedger/src/main/java/com/pluralsight/Configuration/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AccountingLedger/src/main/java/com/pluralsight/Controllers/ReportsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AccountingLedger/src/main/java/com/pluralsight/Controllers/ReportsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/front-end-ledger.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/library/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/library/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/Comfortaa-Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/Comfortaa-Light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/Comfortaa-Medium.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/Comfortaa-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/Comfortaa-SemiBold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/updated.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/application.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/filter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/library/axios.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/library/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/library/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/library/mustache.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/services/categories-service.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/services/products-service.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/services/profile-service.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/services/user-service.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/template-builder.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/error.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/filter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/header.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/image-detail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/login-form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/message.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/product.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/profile.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user.html" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2iNiV7TerXuNOv4O2oeolbgVh0V" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JavaScript Debug.error.html.executor": "Run",
+    "JavaScript Debug.filter.html.executor": "Run",
+    "JavaScript Debug.home.html.executor": "Run",
+    "JavaScript Debug.index.html.executor": "Run",
+    "JavaScript Debug.profile.html.executor": "Run",
+    "JavaScript Debug.user.html.executor": "Run",
+    "Node.js.categories-service.js.executor": "Run",
+    "Node.js.template-builder.js.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "dana",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/nolimit/Desktop/GitProjYU/accounting-ledger-V2/front end",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/images" />
+      <recent name="$PROJECT_DIR$/fonts" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="efcdc85f-6dd2-4b9e-9f1e-2adf45da4316" name="Changes" comment="" />
+      <created>1719337455894</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1719337455894</updated>
+      <workItem from="1721126475683" duration="193000" />
+      <workItem from="1721167569487" duration="1754000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
